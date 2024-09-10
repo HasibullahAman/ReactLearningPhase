@@ -22,10 +22,14 @@ class Counter extends Component{
             <div>
                 <p> شمارنده:{count}</p>
                 <p>{this.props.children}</p>
-
             </div>
         )
     }
+}
+
+
+Counter.defaultProps = {
+    count: 100
 }
 
 

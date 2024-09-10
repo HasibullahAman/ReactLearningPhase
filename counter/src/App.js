@@ -13,6 +13,7 @@ class App extends Component {
         <Counter count ={10}>
           این شمارنده من است که من خیلی دوستش دارم
         </Counter>
+        <Counter /> 
       </div>
     );
   }
