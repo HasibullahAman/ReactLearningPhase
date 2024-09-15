@@ -1,7 +1,7 @@
 // import { Component } from "react";
 import "./App.css";
 import { useState } from "react";
-
+import Counter from "./component/counter";
 // Create Stat in classComponent
 
 // class App extends Component {
@@ -46,16 +46,10 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="App">
       <header>
         <h1>شمارنده من:</h1>
-        <p>{count}</p>
-        <p>{name}</p>
-        <p>{arr}</p>
-        <button onClick={changeCount}>ChangeNumber</button>
-        <button onClick={incresNumber}>+</button>
-        <button onClick={decresNumber}>-</button>
-        <button onClick={resetCount}>reset</button>
+        <Counter inc = "incre"/>
       </header>
     </div>
   );
