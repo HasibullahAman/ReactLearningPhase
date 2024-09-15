@@ -27,8 +27,6 @@ import Counter from "./component/counter";
 
 const App = () => {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("Ali");
-  const [arr, setArr] =useState([1,2,3])
 
 
   const changeCount = () =>{
@@ -49,7 +47,8 @@ const App = () => {
     <div className="App">
       <header>
         <h1>شمارنده من:</h1>
-        <Counter inc = "incre"/>
+        <h1>{count}</h1>
+        <Counter inc = {incresNumber} dec = {decresNumber} rest = {resetCount}/>
       </header>
     </div>
   );
