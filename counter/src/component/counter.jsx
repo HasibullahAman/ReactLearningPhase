@@ -5,10 +5,8 @@ const Counter = ({inc,dec,rest,count}) =>{
     <div>
       <h1>{count}</h1>
       <br />
-      <br />
       <button onClick={inc}>+</button>
-      <br />
-      <button onClick={dec}>-</button>
+      <button style={{backgroundColor: count === 0 ? 'teal' : 'red'}} onClick={dec} disabled={count ===0}>-</button>
       <br />
       <button onClick={rest}>reset</button>
     </div>
@@ -16,8 +14,8 @@ const Counter = ({inc,dec,rest,count}) =>{
 }
 
 
-Counter.propTypes = {
-  inc: PropTypes.func,
+Counter.propTypes = {    
+  inc: PropTypes.func, 
   dec: PropTypes.func,
   rest: PropTypes.func,
   count: PropTypes.number

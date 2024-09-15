@@ -1,5 +1,5 @@
 // import { Component } from "react";
-import "./App.css";
+import style from './App.module.css';
 import { useState } from "react";
 import Counter from "./component/counter";
 // Create Stat in classComponent
@@ -37,6 +37,9 @@ const App = () => {
     setCount(count + 1);
   }
   const decresNumber = () => {
+    // if(count === 0){
+    //   return alert("کفایت میکند عزیز دلم");
+    // } 
     setCount(count - 1);
   }
   const resetCount = () => {
@@ -44,10 +47,10 @@ const App = () => {
   }
 
   return (
-    <div className="App">
-      <header>
-        <h1>شمارنده من:</h1>
-        <h1>{count}</h1>
+    <div className={style.App}>
+      <header className={style.AppHeader}>
+        <h1 style={{color:"aqua", border: "1px solid red"}}>شمارنده من:</h1>
+        <h1 style={{backgrouundColor: count === 0 ? 'red': "green"}}>{count}</h1>
         <Counter inc = {incresNumber} dec = {decresNumber} rest = {resetCount}/>
       </header>
     </div>
