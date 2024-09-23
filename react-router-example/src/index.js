@@ -9,6 +9,7 @@ import App from "./App";
 import About from "./components/About";
 import Books from "./components/Books";
 import Book from "./components/Book";
+import NotFound from "./components/NotFound";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,9 +25,11 @@ root.render(
                 <main style={{ padding: "1rem" }}>
                   <p>کتاب مورد نظر خود را انتخاب کنید!</p>
                 </main>
-              }/>
-            <Route path="/books/:bookId" element={<Book />} />
+              }
+            />
+            <Route path=":bookId" element={<Book />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
